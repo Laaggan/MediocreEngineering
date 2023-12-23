@@ -6,10 +6,99 @@
 
 @code {
     private string chosenSlogan;
+    private string readText = @"
+Vi har kompetensen du behöver - kanske.
+Vi har kompetensen du förtjänar, inte den du behöver.
+Vi har allt - till och med lösningar. Ibland.
+De som förstår, de förstår
+Inte alla förstår. Det gäller även oss.
+Du behöver oss - ungefär lika lite som du tror
+Ingen gillar en skryt-pelle, anlita en realist
+Du får vad du betalat för..
+Seriöst, va trodde du?
+Du hittar oss i fikarummet. Eller inte alls
+Världen behöver inte mer hjältar
+Vi sänker er lägstanivå
+Personalen är vår sämsta resurs
+Om ni behöver ytterligare problem
+När det du behöver inte är det du vill ha.
+Det är dyrt att anlita proffs - vi tar bara hälften!
+personalen är vår bästa resurs.....
+Personalen är vår enda resurs...
+vår personal.. är vår personal....
+Vi löser problem, vi skapar problem. Circle of Life.
+Vi är vad vi heter
+Mediokert är bara förnamnet
+Varför? Varför inte.
+varför inte
+Vi känner inte till ordet omöjigt. Seriöst.
+Ingen lägger ner så lite tid på felsökning som oss
+Det var inte vi som satt längst fram och ställde dumma frågor på föreläsningarna
+Om det blir delar över har vi sparat in materialkostnaden. Win.
+Hallandsåsen hade kunnat varit ett av våra projekt
+Det var så när vi kom
+Vi kom, vi såg, vi gick
+Vi gör kvalificerade gissningar. Eller iallafall gissningar.
+Inte störst men heller inte bäst
+Cash, smaragder och äkta diamanter.
+Vi kunde inte komma på en bättre slogan
+Vi har trots allt en slogan, eller?
+Trust me, I have a slogan
+Vi låter vår kompetens tala för sig själv.
+Höjer dina förväntningar, sänker dina krav
+At least it's Engineering
+Höjer dina förväntningar, snälla ställ inga krav.
+Sänker era förväntningar, höjer era krav
+Ingen kan göra allt men alla kan göra inget
+Sammanlagt har vi hela två års utbildning på teknikprogrammet, vilket gör oss unika på marknaden
+Våra after works är det enda som inte är mediokert
+Nu är vi här. När får vi gå?
+ursäkta på förhand.
+Får dina medarbetares inkompetens att ifrågasättas
+Google är vår bästa vän
+Vår nivå får er att se smarta ut
+Makes you look good
+Det vi kan, kan någon annan mycket bättre
+Vi kan Wikipedia.
+Not Good, but Good Enough
+När du får oväntat besök
+När ett steg bakåt är bättre än två fram
+När ett steg tillbaka, åtminstone är ett steg.
+När ett steg tillbaka, åtminstone är ett steg. I en riktning
+Vi omdefinierar steg, och riktning
+Ingen lägger ner så mycket tid på så mycket, med så lite resultat, till ett så pass lågt pris.
+Vi gör iallafall 40 timmar per vecka. Ibland
+Ett stort steg för människan. Ett litet steg för er
+Ett stort steg för oss
+Sex säljer. Men här är alla oskulder.
+Låt oss ta varandras händer och sjunga ""We shall overcome""
+Live Love Laugh
+Det inte en generator kan göra kan inte vi heller
+Vad andra kallar ""fel"" kallar vi gedigen iterationsprocess
+När ditt företag vill ha en skjuts nedåt!
+Inofficial sponsor of Donald Trump.
+Mitt emellan, alltid
+Vi möts halvvägs, eller?
+Konkurshot by experience
+Making America great again.
+Vi bygger Trumps mur
+Making America great again - sort of
+när nästan duger
+Never finishes first...
+referenser: Ringhals - Skapade jobb med hjälp av en dammsugare.
+När nära faktiskt skjuter haren.
+Catalyzing inefficiency
+Close and still a cigarr
+100% av allt. 50% av gångerna.
+Vi ger 100%. 50% bra och 50 dåligt.
+Det blir mycket pingis. Vi har ett eget bord.
+80% jobb 30% matematik
+noll koll är inte så illa";
+
     protected override async Task OnInitializedAsync()
     {
-        var path = "Slogans.txt";
-        string readText = File.ReadAllText(path);
+        // var path = "Slogans.txt";
+        // string readText = File.ReadAllText(path);
         var slogans = readText.Split("\n");
 
         var index = (int)Math.Floor(slogans.Length*Random.Shared.NextSingle());
