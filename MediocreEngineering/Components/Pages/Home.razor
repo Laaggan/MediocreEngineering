@@ -1,0 +1,18 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1 style="text-align: center">@chosenSlogan</h1>
+
+@code {
+    private string chosenSlogan;
+    protected override async Task OnInitializedAsync()
+    {
+        var path = "Slogans.txt";
+        string readText = File.ReadAllText(path);
+        var slogans = readText.Split("\n");
+
+        var index = (int)Math.Floor(slogans.Length*Random.Shared.NextSingle());
+        chosenSlogan = slogans[index];
+    }
+}
