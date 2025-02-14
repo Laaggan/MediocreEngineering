@@ -1,0 +1,60 @@
+.App {
+  background-color: aqua;
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.next-button{
+  position: absolute; 
+  top: 80%; 
+  left: 80%;
+}
+
+.child{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+  font-size: xx-large;
+  padding-left: 2rem;
+  height: 20%;
+  width: 70%;
+  transform: translateX(200%);
+  /* transition: transform 1s ease-in-out; */
+  /* transition: 1s; */
+  animation: left-to-right 4s ease-in forwards;
+}
+
+.child-without-animation{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+  font-size: xx-large;
+  padding-left: 2rem;
+  height: 20%;
+  width: 70%;
+  transform: translateY(20%);
+}
+
+.parent:hover .child{
+  /* background-color: green; */
+}
+
+@keyframes left-to-right {
+  0%{
+      transform: translateX(200%);
+  }
+  100%{
+      transform: translateX(0%);
+  }
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
