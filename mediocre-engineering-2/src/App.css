@@ -1,60 +1,40 @@
-.App {
-  background-color: aqua;
-  position: absolute; 
-  top: 0; 
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.next-button{
-  position: absolute; 
-  top: 80%; 
-  left: 80%;
-}
-
-.child{
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+  background-color: #fdf6e3;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-color: white;
-  color: black;
-  font-size: xx-large;
-  padding-left: 2rem;
-  height: 20%;
-  width: 70%;
-  transform: translateX(200%);
-  /* transition: transform 1s ease-in-out; */
-  /* transition: 1s; */
-  animation: left-to-right 4s ease-in forwards;
 }
 
-.child-without-animation{
-  display: flex;
-  align-items: center;
-  background-color: white;
-  color: black;
-  font-size: xx-large;
-  padding-left: 2rem;
-  height: 20%;
-  width: 70%;
-  transform: translateY(20%);
+.quote {
+  font-size: 1.5rem;
+  max-width: 600px;
+  margin-bottom: 30px;
+  transition: opacity 0.3s ease;
+  color: #333;
 }
 
-.parent:hover .child{
-  /* background-color: green; */
+.fade-in {
+  opacity: 1;
 }
 
-@keyframes left-to-right {
-  0%{
-      transform: translateX(200%);
-  }
-  100%{
-      transform: translateX(0%);
-  }
+.fade-out {
+  opacity: 0;
 }
 
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
+.refresh-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #2aa198;
+  transition: transform 0.2s;
+}
+
+.refresh-btn:hover {
+  transform: rotate(90deg);
+}
