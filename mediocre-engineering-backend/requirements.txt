@@ -1,0 +1,4 @@
+pydantic
+sqlalchemy
+alembic
+fastapi[standard]
