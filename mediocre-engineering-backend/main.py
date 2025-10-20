@@ -4,11 +4,23 @@ from sqlalchemy import create_engine
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import random
 from view_models import InspiringQuoteVM
 from models import InspiringQuote
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",  # React dev server
+        "https://mediocre-engineering.xyz",   # your production frontend
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 CONNECTION_STRING = "sqlite:////Users/laggan/repos/MediocreEngineering/mediocre-engineering-backend/mediocre_engineering.db"
 engine = create_engine(CONNECTION_STRING, echo=True)
 
@@ -26,7 +38,7 @@ def get_random_item():
     session = Session(engine)
     random_id = random.randint(1, 91)
     stmt = (select(InspiringQuote).where(InspiringQuote.id == random_id))
-    quote = session.scalars(stmt).one()
+    quote:InspiringQuote = session.scalars(stmt).one()
     return quote
 
 @app.post("/quotes")
