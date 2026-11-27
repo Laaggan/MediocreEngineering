@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .next-button{
+                position: absolute; 
+                top: 80%; 
+                left: 80%;
+            }
+
+            .parent{
+                background-color: aqua;
+                position: absolute; 
+                top: 0; 
+                left: 0;
+                height: 100%;
+                width: 100%;
+            }
+
+            .child{
+                display: flex;
+                align-items: center;
+                background-color: white;
+                color: black;
+                font-size: xx-large;
+                padding-left: 2rem;
+                height: 20%;
+                width: 70%;
+                transform: translateX(200%);
+                /* transition: transform 1s ease-in-out; */
+                /* transition: 1s; */
+                animation: left-to-right 4s ease-in forwards;
+            }
+
+            .parent:hover .child{
+                /* background-color: green; */
+            }
+
+            @keyframes left-to-right {
+                0%{
+                    transform: translateX(200%);
+                }
+                100%{
+                    transform: translateX(0%);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child">
+                "Vi har kompetensen du behöver - kanske."
+            </div>
+            <button class="next-button">Nästa inspirationsmeddelande</button>
+        </div>
+    </body>
+</html>

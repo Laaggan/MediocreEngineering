@@ -1,0 +1,40 @@
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+  background-color: #fdf6e3;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote {
+  font-size: 1.5rem;
+  max-width: 600px;
+  margin-bottom: 30px;
+  transition: opacity 0.3s ease;
+  color: #333;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.refresh-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #2aa198;
+  transition: transform 0.2s;
+}
+
+.refresh-btn:hover {
+  transform: rotate(90deg);
+}
