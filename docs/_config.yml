@@ -1,0 +1,32 @@
+title: Mediocre Engineering
+description: Not Good, but Good Enough.
+lang: sv
+
+# YouTube video ID of the beach-sound video that plays behind the quotes.
+# It's the part after "v=" in the URL, e.g. https://www.youtube.com/watch?v=XXXXXXXXXXX
+# Leave empty to hide the waves button.
+beach_video_id: ""
+
+# Blog posts live in _posts/ as YYYY-MM-DD-some-title.md
+permalink: /blog/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: drafts
+    values:
+      layout: post
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    disable: true
+
+exclude:
+  - README.md
