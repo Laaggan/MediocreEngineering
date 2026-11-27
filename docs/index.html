@@ -3,8 +3,7 @@ layout: default
 body_class: home
 ---
 <main class="quotes" id="quotes">
-  <p class="eyebrow" aria-hidden="true">Inspirationsmeddelande <span id="quote-number">1</span> / {{ site.data.quotes.size }}</p>
-  <blockquote id="quote" class="quote" aria-live="polite">“{{ site.data.quotes[0] }}”</blockquote>
+  <blockquote id="quote" class="quote" aria-live="polite"></blockquote>
   <div class="controls">
     <button id="next" class="btn-primary" type="button">
       Nästa
@@ -17,7 +16,6 @@ body_class: home
     </button>
     {% endif %}
   </div>
-  <p class="hint">Klicka på citatet, eller tryck →</p>
 </main>
 
 <div class="sea" aria-hidden="true">

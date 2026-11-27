@@ -1,7 +1,6 @@
 (function () {
   var quotes = window.QUOTES || [];
   var quoteEl = document.getElementById('quote');
-  var numberEl = document.getElementById('quote-number');
   var nextBtn = document.getElementById('next');
   if (!quotes.length || !quoteEl) return;
 
@@ -18,7 +17,6 @@
 
   function render() {
     quoteEl.textContent = '“' + quotes[order[pos]] + '”';
-    numberEl.textContent = pos + 1;
   }
 
   function go(step) {

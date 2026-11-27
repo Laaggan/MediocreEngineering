@@ -76,13 +76,6 @@ body.home { display: flex; flex-direction: column; overflow-x: hidden; }
   z-index: 1;
 }
 
-.eyebrow {
-  margin: 0;
-  font-size: 12px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
 
 .quote {
   margin: 0;
@@ -120,7 +113,6 @@ body.home { display: flex; flex-direction: column; overflow-x: hidden; }
 .btn-ghost:hover { border-color: var(--muted); }
 .btn-ghost[aria-pressed="true"] { border-color: var(--sand); color: var(--sand); }
 
-.hint { margin: 0; font-size: 13px; color: var(--muted); }
 
 .sea {
   position: fixed;
@@ -198,4 +190,13 @@ body.home { display: flex; flex-direction: column; overflow-x: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .sea svg { animation: none; }
   .quote, .quote.is-leaving, .quote.is-entering { transition: none; transform: none; filter: none; }
+}
+
+/* Small uppercase date line on blog pages */
+.eyebrow {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
